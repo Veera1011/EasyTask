@@ -1,26 +1,27 @@
-$redcolor: red;
-
 header {
-  margin-top: 0;
-  background-color: rgb(39, 44, 89);
+  margin: 0;
+  background-color: #272c59;
   height: 100px;
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 0 20px;
-  position: sticky;   
-  top: 0;             
-  z-index: 1000;     
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   img {
     height: 60px;
+    width: 60px;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   h1 {
-    color: $redcolor;
+    color: #ff6b6b;
     margin: 0;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
   }
 }

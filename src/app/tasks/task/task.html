@@ -1,10 +1,10 @@
 <article>
-    <h2>Task Title</h2>
-    <time>Time</time>
-    <p>Summary</p>
-    <p id="actions">
-        <button>
-            Complete
-        </button>
-    </p>
+  <div class="task-header">
+    <h2>{{ title }}</h2>
+    <time>{{ duedate }}</time>
+  </div>
+  <p class="task-summary">{{ summary }}</p>
+  <div class="task-actions">
+    <button (click)="onComplete()">Complete</button>
+  </div>
 </article>

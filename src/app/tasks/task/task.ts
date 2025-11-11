@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './task.scss',
 })
 export class Task {
+  @Input() title!: string;
+  @Input() summary!: string;
+  @Input() duedate!: string;
 
+  onComplete() {
+    console.log('Task completed:', this.title);
+    
+  }
 }

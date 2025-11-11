@@ -1,20 +1,21 @@
 <section id="tasks">
-    <header>
-        <h1>{{name}}'s tasks</h1>
-        <menu>
- <button>
-            add task
-        </button>
-        </menu>
-       
-    </header>
+  <header>
+    <h1>{{ name }}'s Tasks</h1>
+    <button>Add Task</button>
+  </header>
 
-<ul>
+  <ul>
     @for (task of selectedusertasks; track task.id) {
-       <li>
-        <app-task></app-task>
-    </li>
+      <li>
+        <app-task 
+          [title]="task.title" 
+          [summary]="task.summary" 
+          [duedate]="task.duedate"
+        />
+      </li>
     }
-   
-</ul>
+    @empty {
+      <li class="no-tasks">No tasks available</li>
+    }
+  </ul>
 </section>
