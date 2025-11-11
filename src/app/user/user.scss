@@ -1,0 +1,42 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    &:hover {
+      background-color: #ffe4e1;
+      border-color: #ff7f7f;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+#tasks {
+  background: #f9fafb; 
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: all 0.3s ease;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin: 0;
+    }
+
+    button {
+      background-color: #0d9488; 
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.1s ease;
+
+      &:hover {
+        background-color: #0f766e;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+}
