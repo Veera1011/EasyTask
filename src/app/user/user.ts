@@ -23,6 +23,7 @@ const index = Math.floor(Math.random() * users.length)
 })
 export class User {
   @Input() user!:user;
+  @Input({required:true}) selected!:boolean;
   // @Input() id!: string;
   // @Input() img!: string;
   //  @Input({required:true}) name!: string;
