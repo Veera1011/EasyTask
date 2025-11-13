@@ -1,16 +1,21 @@
+@if (isadding) {
+  <app-new-task [userid]="id"  (oncancel)="ontaskcancel()"/>
+}
+
+
+ <app-card>
 <section id="tasks">
   <header>
     <h1>{{ name }}'s Tasks</h1>
-    <button>Add Task</button>
+    <button (click)="newtask()">Add Task</button>
   </header>
 
   <ul>
     @for (task of selectedusertasks; track task.id) {
       <li>
         <app-task 
-          [title]="task.title" 
-          [summary]="task.summary" 
-          [duedate]="task.duedate"
+          [task]="task" 
+         (complete)="taskcompleted($event)"
         />
       </li>
     }
@@ -19,3 +24,4 @@
     }
   </ul>
 </section>
+ </app-card>

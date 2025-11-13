@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Taskdetails } from '../task.model';
 
 @Component({
   selector: 'app-task',
@@ -7,12 +8,14 @@ import { Component, Input } from '@angular/core';
   styleUrl: './task.scss',
 })
 export class Task {
-  @Input() title!: string;
-  @Input() summary!: string;
-  @Input() duedate!: string;
+  @Input() task!: Taskdetails;
+  // @Input() summary!: string;
+  // @Input() duedate!: string;
+  @Output() complete = new EventEmitter();
 
   onComplete() {
-    console.log('Task completed:', this.title);
+    console.log('Task completed:', this.task.title);
+    this.complete.emit(this.task.id)
     
   }
 }
