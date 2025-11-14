@@ -5,21 +5,15 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Header } from './header/header';
 import { User } from './user/user';
-import { Tasks } from './tasks/tasks';
-import { Task } from './tasks/task/task';
-import { NewTask } from './tasks/new-task/new-task';
 import { FormsModule } from '@angular/forms';
-import { Card } from './shared/card/card';
 import { DatePipe } from '@angular/common';
-import { TasksService } from './tasks/tasks.service';
+
+import { SharedModule } from './shared/shared.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @NgModule({
   declarations: [
     App,
-    Tasks,
-    Task,
-    NewTask,
-    Card
   ],
   imports: [
     BrowserModule,
@@ -27,7 +21,9 @@ import { TasksService } from './tasks/tasks.service';
     Header,
     User,
     FormsModule,
-    DatePipe
+    DatePipe,
+   SharedModule,
+   TasksModule
   ],
   providers:[],
   bootstrap: [App]
